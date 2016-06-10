@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Hello WebSocket</title>
-    <script src="js/sockjs-0.3.4.js"></script>
-    <script src="js/stomp.js"></script>
+    <script src="/resources/js/sockjs-0.3.4.js"></script>
+    <script src="/resources/js/stomp.js"></script>
     <script type="text/javascript">
         var stompClient = null;
 
@@ -48,7 +48,14 @@
         }
     </script>
 </head>
+<!--<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>-->
+<!--<form th:action="@{/logout}" method="post">-->
+    <!--<input type="submit" value="Sign Out"/>-->
+<!--</form>-->
 <body onload="disconnect()">
+<form action="/logout.html" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
     Javascript and reload this page!</h2></noscript>
 <div>

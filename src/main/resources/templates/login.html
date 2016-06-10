@@ -1,0 +1,38 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>sign in - spring 4/angularjs chat room</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/resources/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="/resources/css/login.css" rel="stylesheet"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/resources/lib/bootstrap/js/html5shiv.js"></script>
+    <script src="/resources/lib/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+    <form class="form-signin" method="post" th:action="@{/login}">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input name="username" type="test" class="form-control" placeholder="User Name" required="true" autofocus="true"/>
+        <input name="password" type="password" class="form-control" placeholder="Password" required="true"/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <hr/>
+        <p class="text-info">
+            <small>Log in as:<br/> <strong>john/smith</strong>,<br/> or <strong>jane/doe</strong></small>
+        </p>
+    </form>
+
+</div>
+<!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
